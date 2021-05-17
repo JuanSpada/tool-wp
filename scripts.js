@@ -12,7 +12,7 @@ const editPhoneValue = () => {
 const sendMessage = () => {
     editPhoneValue();
     if(phoneInput.value.length > 8 && phoneInput.value.length < 18){
-        let url = "https://api.whatsapp.com/send?text=" + messageInput.value + "&phone=" + "+" + phoneInput;
+        let url = "https://api.whatsapp.com/send?text=" + messageInput.value + "&phone=" + "+" + phoneInput.value;
         window.open(url);
         validatorMessage.style.display = "none";
     }else{
