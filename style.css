@@ -5,7 +5,7 @@
   padding: 8% 0 0;
   margin: auto;
 }
-input, textarea {
+input, textarea, select {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;

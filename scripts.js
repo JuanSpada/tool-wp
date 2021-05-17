@@ -1,6 +1,7 @@
 let phoneInput = document.querySelector('#phone');
 const messageInput = document.querySelector('#message');
 const sendBtn = document.querySelector('#sendBtn');
+areaCodeInput = document.querySelector('#areaCode');
 const editPhoneValue = () => {
     let editedValue = phoneInput.value;
     editedValue = phoneInput.value.trim();
@@ -12,7 +13,7 @@ const editPhoneValue = () => {
 const sendMessage = () => {
     editPhoneValue();
     if(phoneInput.value.length > 8 && phoneInput.value.length < 18){
-        let url = "https://api.whatsapp.com/send?text=" + messageInput.value + "&phone=" + "+" + phoneInput.value;
+        let url = "https://api.whatsapp.com/send?text=" + messageInput.value + "&phone=" + "+" + areaCodeInput.value + phoneInput.value;
         window.open(url);
         validatorMessage.style.display = "none";
     }else{
